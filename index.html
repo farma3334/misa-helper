@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MISA HELPER — Dashboard Demo</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --panel: #12121a;
+      --panel2: #171722;
+      --green: #00ff9d;
+      --cyan: #00e5ff;
+      --text: #d0d0d8;
+      --dim: #6b6b78;
+      --red: #ff4d6d;
+      --yellow: #ffd166;
+      --border: #262633;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+    }
+    .topbar {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 24px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-weight: 700; font-size: 18px;
+      color: var(--green); letter-spacing: 2px;
+      font-family: 'Courier New', monospace;
+    }
+    .logo b { color: var(--cyan); }
+    .nav-links { display: flex; gap: 18px; margin-left: auto; }
+    .nav-links a {
+      color: var(--dim); text-decoration: none; font-size: 14px;
+      padding: 6px 10px; border-radius: 6px; transition: .2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--green); background: var(--panel2); }
+    .status-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); animation: pulse 1.6s infinite; }
+    @keyframes pulse { 50% { opacity: .35; } }
+    main { max-width: 1000px; margin: 30px auto; padding: 0 24px; }
+    .hero {
+      text-align: center; padding: 48px 20px;
+      border: 1px solid var(--border); border-radius: 14px;
+      background: linear-gradient(180deg, var(--panel), var(--bg));
+    }
+    .hero h1 {
+      font-size: 40px; font-family: 'Courier New', monospace;
+      background: linear-gradient(90deg, var(--green), var(--cyan));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      letter-spacing: 3px;
+    }
+    .hero p { color: var(--dim); margin-top: 10px; font-size: 16px; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 26px; }
+    .stat {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px; text-align: center;
+    }
+    .stat .num { font-size: 26px; font-weight: 700; color: var(--green); }
+    .stat .lbl { color: var(--dim); font-size: 13px; margin-top: 4px; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; }
+    .card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px;
+    }
+    .card h3 { font-size: 15px; color: var(--cyan); margin-bottom: 8px; }
+    .card p { color: var(--dim); font-size: 13px; line-height: 1.5; }
+    footer {
+      text-align: center; color: var(--dim); font-size: 13px;
+      padding: 24px; border-top: 1px solid var(--border); margin-top: 40px;
+      font-family: 'Courier New', monospace;
+    }
+    footer b { color: var(--green); }
+    @media (max-width: 720px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .cards { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">MISA <b>HELPER</b></div>
+    <div class="status-dot"></div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Overview</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="warn.html">Warn</a>
+      <a href="ban.html">Ban</a>
+      <a href="jail.html">Jail</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>MISA HELPER</h1>
+      <p>Modular Discord bot — moderation, verification, security, tickets, levels and more.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">42</div><div class="lbl">Commands</div></div>
+      <div class="stat"><div class="num">12</div><div class="lbl">Categories</div></div>
+      <div class="stat"><div class="num">99.9%</div><div class="lbl">Uptime</div></div>
+      <div class="stat"><div class="num">SQLite</div><div class="lbl">Storage</div></div>
+    </div>
+
+    <div class="cards">
+      <div class="card"><h3>Moderation</h3><p>warn, ban, kick, timeout, jail, case management and warning auto-progression.</p></div>
+      <div class="card"><h3>Verification</h3><p>Gender verification, stats and leaderboard with role assignment.</p></div>
+      <div class="card"><h3>Security</h3><p>Anti-bot, audit-log monitoring, automod, anti-raid and whitelist.</p></div>
+      <div class="card"><h3>Tickets</h3><p>Ticket panels, ticket channels and staff apply system.</p></div>
+      <div class="card"><h3>Leveling</h3><p>XP, leaderboards, ignored channels and role rewards.</p></div>
+      <div class="card"><h3>Voice</h3><p>Live voice state commands, temporary voice channels and voice logs.</p></div>
+    </div>
+  </main>
+
+  <footer>
+    ════════════════════════════════════════════════════════════════<br>
+    ██████╗  ██████╗  ██████╗ ███╗   ███╗ █████╗<br>
+    ██╔══██╗██╔═══██╗██╔═══██╗████╗ ████║██╔══██╗<br>
+    ██████╔╝██║   ██║██║   ██║██╔████╔██║███████║<br>
+    ██╔══██╗██║   ██║██║   ██║██║╚██╔╝██║██╔══██║<br>
+    ██████╔╝╚██████╔╝╚██████╔╝██║ ╚═╝ ██║██║  ██║<br>
+    ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝<br>
+    Developed by <b>Farma</b>
+  </footer>
+</body>
+</html>

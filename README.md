@@ -44,6 +44,17 @@ This is a **demo showcase** of the project.
 
 ---
 
+## <img src="assets/emoji.png" alt="emoji" width="22" style="vertical-align: middle"> Demo Pages
+
+<img src="assets/bullet.gif" alt="bullet" width="16" style="vertical-align: middle"> [Dashboard demo](dashboard.html)
+<img src="assets/bullet.gif" alt="bullet" width="16" style="vertical-align: middle"> [Warn panel](warn.html)
+<img src="assets/bullet.gif" alt="bullet" width="16" style="vertical-align: middle"> [Ban panel](ban.html)
+<img src="assets/bullet.gif" alt="bullet" width="16" style="vertical-align: middle"> [Jail panel](jail.html)
+
+These are static demo mockups — the real bot logic is not included.
+
+---
+
 ## <img src="assets/emoji.png" alt="emoji" width="22" style="vertical-align: middle"> Command Categories
 
 <img src="assets/bullet.gif" alt="bullet" width="16" style="vertical-align: middle"> **Moderation:** `warn`, `ban`, `kick`, `timeout`, `jail`, `unjail`, `case`
