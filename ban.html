@@ -62,20 +62,21 @@
     <div class="panel">
       <div class="field">
         <label>User</label>
-        <input placeholder="@User or user ID" />
+        <input id="user" placeholder="@User or user ID" />
       </div>
       <div class="field">
         <label>Reason</label>
-        <textarea rows="3" placeholder="Reason for the ban..."></textarea>
+        <textarea id="reason" rows="3" placeholder="Reason for the ban..."></textarea>
       </div>
       <div class="toggle-row">
         <input type="checkbox" id="delete" />
         <label for="delete"><span>Delete messages from this user</span></label>
       </div>
       <div class="row-actions">
-        <button class="btn btn-ghost">Cancel</button>
-        <button class="btn btn-ban">Ban User</button>
+        <button class="btn btn-ghost" onclick="location.reload()">Cancel</button>
+        <button class="btn btn-ban" onclick="MISA.submitModeration('ban', '#user', '#reason', '#result')">Ban User</button>
       </div>
+      <div id="result" class="info-note" style="margin-top:14px;min-height:18px;"></div>
       <div class="info-note">
         Daily moderation limits apply. Bans are recorded with a case ID and can be reviewed in <b>#mod-logs</b>.
       </div>
@@ -83,5 +84,6 @@
   </main>
 
   <footer>Developed by <b>Farma</b></footer>
+  <script src="js/all.js"></script>
 </body>
 </html>

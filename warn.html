@@ -59,16 +59,17 @@
     <div class="panel">
       <div class="field">
         <label>User</label>
-        <input placeholder="@User or user ID" />
+        <input id="user" placeholder="@User or user ID" />
       </div>
       <div class="field">
         <label>Reason</label>
-        <textarea rows="3" placeholder="Reason for the warning..."></textarea>
+        <textarea id="reason" rows="3" placeholder="Reason for the warning..."></textarea>
       </div>
       <div class="row-actions">
-        <button class="btn btn-ghost">Cancel</button>
-        <button class="btn btn-warn">Issue Warning</button>
+        <button class="btn btn-ghost" onclick="location.reload()">Cancel</button>
+        <button class="btn btn-warn" onclick="MISA.submitModeration('warn', '#user', '#reason', '#result')">Issue Warning</button>
       </div>
+      <div id="result" class="info-note" style="margin-top:14px;min-height:18px;"></div>
       <div class="info-note">
         Auto-progression: 2 warnings → <b>First Warn</b> role · 4 → <b>Second Warn</b> · 5 → auto-jail.
       </div>
@@ -76,5 +77,6 @@
   </main>
 
   <footer>Developed by <b>Farma</b></footer>
+  <script src="js/all.js"></script>
 </body>
 </html>
